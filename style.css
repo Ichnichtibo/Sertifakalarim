@@ -9,48 +9,96 @@ body {
     align-items: center;
     height: 100vh;
     text-align: center;
-    padding-top: 50px;
+    margin-top: 50px;
 }
 
-h1 {
-    font-size: 28px;
-    color: #333;
+#kategoriler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
-    text-transform: uppercase;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+#kategoriler button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#kategoriler button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* Yumuşak geçiş için animasyon */
+.kategoriler {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    height: 0;
+    overflow: hidden;
+}
+
+.kategoriler.active {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+}
+
+ul  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 90%;
 }
 
 li {
-    width: 500px;
+    
+    width: calc(50% - 20px); /* İki sütun için genişlik ayarı */
+    max-width: 400px; /* Mobilde daha iyi görünüm için */
+    height: 100px;
     padding: 15px;
-    margin: 10px auto;
+    margin: 10px;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-size: 21px;
     font-weight: bold;
-    transform: scale(1); /* Varsayılan boyut */
-    transition: all 0.3s ease; /* Tüm değişiklikler için yumuşak geçiş */
-    overflow: hidden;
-    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    list-style: none;
+
+}
+
+@media (max-width: 600px) {
+    li {
+        width: 100%; /* Küçük ekranlarda tek sütuna düşmesi için */
+    }
 }
 
 li:hover {
-    transform: scale(1);
+    height: auto;
+    transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+
+/* Görseller için animasyon */
 li img {
     width: 0%;
     border-radius: 8px;
-    margin-top: 10px;
+    margin-top: 6px;
     opacity: 0;
-    transition: width 0.7s ease, opacity 0.05s ease; /* Genişleme süresi 1 saniye */
+    transition: width 0.7s ease, opacity 0.7s ease;
 }
 
 li:hover img {

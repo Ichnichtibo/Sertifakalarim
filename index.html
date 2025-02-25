@@ -5,26 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Benim Sertifikalarım</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Sertİfİkalar</h1>
-    <ul>
-        <li>
-            Go ile Programlamaya Giriş
-            <img src="images/go.jpeg" alt="Sertifika resmi">
-        </li>
-        <li>
-            Sıfırdan Zirveye Adım Adım Bol Uygulamalı Java Kursu
-            <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-504c9ea2-1d42-4b1e-a3dd-022424580570.jpg?v=1708700839000" alt="Sertifika resmi">
-        </li>
-        <li>
-            C++ Dersleri: Sıfırdan Uzmanlığa Nesne Tabanlı Programlama
-            <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-fb8f5ffa-86a1-4c37-af10-ffa5f4c2e13d.jpg?v=1689078514000" alt="Sertifika resmi">
-        </li>
-        <li>
-            SAVAŞAN İHA YARIŞMASI
-            <img src="images/TEknofest.png" alt="Sertifika resmi">
-        </li>
-    </ul>
+    <h1>İBRAHİM ARİF SAYKI</h1>
+    <div id="kategoriler">
+        <button id="sertifikaButton">Sertifikalar</button>
+        <button id="projelerButton">Projeler</button>
+        <button id="gonulluButton">Gönüllü Çalışmalar</button>
+    </div>
+    <div class="kategori">
+    <div id="sertifikalar">
+        <ul>
+            <li>
+                <p>Go ile Programlamaya Giriş</p>
+                <img src="images/go.jpeg" alt="Go Sertifikası">
+            </li>
+            <li>
+                <p>Sıfırdan Zirveye Adım Adım Bol Uygulamalı Java Kursu</p>
+                <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-504c9ea2-1d42-4b1e-a3dd-022424580570.jpg?v=1708700839000" alt="Java Sertifikası">
+            </li>
+            <li>
+                <p>C++ Dersleri: Sıfırdan Uzmanlığa Nesne Tabanlı Programlama</p>
+                <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-fb8f5ffa-86a1-4c37-af10-ffa5f4c2e13d.jpg?v=1689078514000" alt="C++ Sertifikası">
+            </li>
+            <li>
+                <p>Savaşan İHA Yarışması</p>
+                <img src="images/TEknofest.png" alt="Teknofest Sertifikası">
+            </li>
+        </ul>
+    </div>
+
+    <div id="projeler" style="display: none;">
+        <ul>
+            <li>
+                <h3>Yazılım Mühendisliği Projesi</h3>
+                <p>Yazılım Mühendisliği dersi kapsamında verilen proje. Proje kapsamında bir web sitesi geliştirildi.</p>
+            </li>
+            <li>
+                <h3>Veri Yapıları ve Algoritmalar Projesi</h3>
+                <p>Veri Yapıları ve Algoritmalar dersi kapsamında verilen proje. Proje kapsamında bir algoritma geliştirildi.</p>
+            </li>
+            <li>
+                <h3>Yapay Zeka Projesi</h3>
+                <p>Yapay Zeka dersi kapsamında verilen proje. Proje kapsamında bir yapay zeka modeli geliştirildi.</p>
+            </li>
+        </ul>
+    </div>
+
+    <div id="gonulluCalismalar" style="display: none;">
+        <ul>
+            <li>
+                <h3>TEKNOFEST</h3>
+                <p>TEKNOFEST kapsamında düzenlenen yarışmada gönüllü olarak görev aldım.</p>
+            </li>
+            <li>
+                <h3>Yazılım Geliştirici Topluluğu</h3>
+                <p>Üniversite bünyesinde kurulan Yazılım Geliştirici Topluluğu'nda gönüllü olarak görev aldım.</p>
+            </li>
+            <li>
+                <h3>Yazılım Mühendisliği Topluluğu</h3>
+                <p>Üniversite bünyesinde kurulan Yazılım Mühendisliği Topluluğu'nda gönüllü olarak görev aldım.</p>
+            </li>
+        </ul>
+    </div>
+</div>
 </body>
 </html>
